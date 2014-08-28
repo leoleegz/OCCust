@@ -1,0 +1,7 @@
+LIBRARY	"msftedit"
+EXPORTS
+vSetDdrawflag	@1
+AlphaBlend		@2
+DllInitialize	PRIVATE
+GradientFill	@4
+TransparentBlt	@5

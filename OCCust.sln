@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxydll", "proxyDLL\msimgproxy.vcproj", "{A73F8F80-7557-4493-8F2F-424FC7939F4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trappola", "trappola\vs80\HookLib\HookLib.vcproj", "{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "trappolautils", "trappola\vs80\HookLibUtils\HookLibUtils.vcproj", "{24221551-8455-4769-AAA7-4A62307C1A4A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OCPlugin", "OCPlugin\OCPlugin.vcproj", "{0EDE2C68-075E-4F18-B4A6-3A71A6CD9CF2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8} = {F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "beccres", "beccres\beccres.vcproj", "{B61668C0-9E22-4FD0-A7CA-1BF92CEE8F9D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msftedit", "msftedit\msftedit.vcproj", "{8110CA86-A98A-4D9A-9951-E5AA78C9ADF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A73F8F80-7557-4493-8F2F-424FC7939F4B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A73F8F80-7557-4493-8F2F-424FC7939F4B}.Debug|Win32.Build.0 = Debug|Win32
+		{A73F8F80-7557-4493-8F2F-424FC7939F4B}.Release|Win32.ActiveCfg = Release|Win32
+		{A73F8F80-7557-4493-8F2F-424FC7939F4B}.Release|Win32.Build.0 = Release|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Debug|Win32.Build.0 = Debug|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Release|Win32.ActiveCfg = Release|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Release|Win32.Build.0 = Release|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Debug|Win32.Build.0 = Debug|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Release|Win32.ActiveCfg = Release|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Release|Win32.Build.0 = Release|Win32
+		{0EDE2C68-075E-4F18-B4A6-3A71A6CD9CF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0EDE2C68-075E-4F18-B4A6-3A71A6CD9CF2}.Debug|Win32.Build.0 = Debug|Win32
+		{0EDE2C68-075E-4F18-B4A6-3A71A6CD9CF2}.Release|Win32.ActiveCfg = Release|Win32
+		{0EDE2C68-075E-4F18-B4A6-3A71A6CD9CF2}.Release|Win32.Build.0 = Release|Win32
+		{B61668C0-9E22-4FD0-A7CA-1BF92CEE8F9D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B61668C0-9E22-4FD0-A7CA-1BF92CEE8F9D}.Debug|Win32.Build.0 = Debug|Win32
+		{B61668C0-9E22-4FD0-A7CA-1BF92CEE8F9D}.Release|Win32.ActiveCfg = Release|Win32
+		{B61668C0-9E22-4FD0-A7CA-1BF92CEE8F9D}.Release|Win32.Build.0 = Release|Win32
+		{8110CA86-A98A-4D9A-9951-E5AA78C9ADF2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8110CA86-A98A-4D9A-9951-E5AA78C9ADF2}.Debug|Win32.Build.0 = Debug|Win32
+		{8110CA86-A98A-4D9A-9951-E5AA78C9ADF2}.Release|Win32.ActiveCfg = Release|Win32
+		{8110CA86-A98A-4D9A-9951-E5AA78C9ADF2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

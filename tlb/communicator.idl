@@ -1,0 +1,780 @@
+// Generated .IDL file (by the OLE/COM Object Viewer)
+// 
+// typelib filename: 2
+
+[
+  uuid(2B317E1D-50E5-4F5E-A3A4-FB85206EDA48),
+  version(1.0),
+  helpstring("Microsoft Office Communicator 2007 API Type Library")
+]
+library CommunicatorAPI
+{
+    // TLib :     // TLib : OLE Automation : {00020430-0000-0000-C000-000000000046}
+    importlib("stdole2.tlb");
+
+    // Forward declare all types defined in this typelib
+    interface IMessenger;
+    interface IMessenger2;
+    interface IMessenger3;
+    interface IMessengerAdvanced;
+    interface IMessengerContactResolution;
+    dispinterface DMessengerEvents;
+    interface IMessengerWindow;
+    interface IMessengerConversationWnd;
+    interface IMessengerConversationWndAdvanced;
+    interface IMessengerContact;
+    interface IMessengerContactAdvanced;
+    interface IMessengerContacts;
+    interface IMessengerService;
+    interface IMessengerServices;
+    interface IMessengerGroup;
+    interface IMessengerGroups;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0006 MOPTIONPAGE;
+
+    typedef enum {
+        MOPT_GENERAL_PAGE = 0,
+        MOPT_PRIVACY_PAGE = 1,
+        MOPT_EXCHANGE_PAGE = 2,
+        MOPT_ACCOUNTS_PAGE = 3,
+        MOPT_CONNECTION_PAGE = 4,
+        MOPT_PREFERENCES_PAGE = 5,
+        MOPT_SERVICES_PAGE = 6,
+        MOPT_PHONE_PAGE = 7
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0006;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0005 MPHONE_TYPE;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0050_0003 CONVERSATION_TYPE;
+
+    typedef enum {
+        CONVERSATION_TYPE_IM = 1,
+        CONVERSATION_TYPE_PHONE = 2,
+        CONVERSATION_TYPE_LIVEMEETING = 4,
+        CONVERSATION_TYPE_AUDIO = 8,
+        CONVERSATION_TYPE_VIDEO = 16,
+        CONVERSATION_TYPE_PSTN = 32
+    } __MIDL___MIDL_itf_msgrua_0001_0050_0003;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0050_0001 ADDRESS_TYPE;
+
+    typedef enum {
+        ADDRESS_TYPE_SMTP = 1,
+        ADDRESS_TYPE_DISPLAY_NAME = 2,
+        ADDRESS_TYPE_EXTERNAL = 3
+    } __MIDL___MIDL_itf_msgrua_0001_0050_0001;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0050_0002 CONTACT_RESOLUTION_TYPE;
+
+    typedef enum {
+        CONTACT_RESOLUTION_CACHED_ONLY = 1,
+        CONTACT_RESOLUTION_ANY = 2
+    } __MIDL___MIDL_itf_msgrua_0001_0050_0002;
+
+    typedef enum {
+        MPHONE_TYPE_ALL = 0xffffffff,
+        MPHONE_TYPE_HOME = 0,
+        MPHONE_TYPE_WORK = 1,
+        MPHONE_TYPE_MOBILE = 2,
+        MPHONE_TYPE_CUSTOM = 3
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0005;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0001 MISTATUS;
+
+    typedef enum {
+        MISTATUS_UNKNOWN = 0,
+        MISTATUS_OFFLINE = 1,
+        MISTATUS_ONLINE = 2,
+        MISTATUS_INVISIBLE = 6,
+        MISTATUS_BUSY = 10,
+        MISTATUS_BE_RIGHT_BACK = 14,
+        MISTATUS_IDLE = 18,
+        MISTATUS_AWAY = 34,
+        MISTATUS_ON_THE_PHONE = 50,
+        MISTATUS_OUT_TO_LUNCH = 66,
+        MISTATUS_IN_A_MEETING = 82,
+        MISTATUS_OUT_OF_OFFICE = 98,
+        MISTATUS_DO_NOT_DISTURB = 114,
+        MISTATUS_IN_A_CONFERENCE = 130,
+        MISTATUS_ALLOW_URGENT_INTERRUPTIONS = 146,
+        MISTATUS_MAY_BE_AVAILABLE = 162,
+        MISTATUS_CUSTOM = 178,
+        MISTATUS_LOCAL_FINDING_SERVER = 256,
+        MISTATUS_LOCAL_CONNECTING_TO_SERVER = 512,
+        MISTATUS_LOCAL_SYNCHRONIZING_WITH_SERVER = 768,
+        MISTATUS_LOCAL_DISCONNECTING_FROM_SERVER = 1024
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0001;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0007 MUAFOLDER;
+
+    typedef enum {
+        MUAFOLDER_INBOX = 0,
+        MUAFOLDER_ALL_OTHER_FOLDERS = 1
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0007;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0003 MCONTACTPROPERTY;
+
+    typedef enum {
+        MCONTACTPROP_INVALID_PROPERTY = 0xffffffff,
+        MCONTACTPROP_GROUPS_PROPERTY = 0,
+        MCONTACTPROP_EMAIL = 1
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0003;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0009 MUASORT;
+
+    typedef enum {
+        MUASORT_GROUPS = 0,
+        MUASORT_ONOFFLINE = 1
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0009;
+
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0002 MMESSENGERPROPERTY;
+
+    typedef enum {
+        MMESSENGERPROP_VERSION = 0,
+        MMESSENGERPROP_PLCID = 1
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0002;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0004 MWINDOWPROPERTY;
+
+    typedef enum {
+        MWINDOWPROP_INVALID_PROPERTY = 0xffffffff,
+        MWINDOWPROP_VIEW_SIDEBAR = 0,
+        MWINDOWPROP_VIEW_TOOLBAR = 1
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0004;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0000_0000_0008 MSERVICEPROPERTY;
+
+    typedef enum {
+        MSERVICEPROP_INVALID_PROPERTY = 0xffffffff
+    } __MIDL___MIDL_itf_msgrua_0000_0000_0008;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0054_0003 PRESENCE_PROPERTY;
+
+    typedef enum {
+        PRESENCE_PROP_MSTATE = 0,
+        PRESENCE_PROP_AVAILABILITY = 1,
+        PRESENCE_PROP_IS_BLOCKED = 2,
+        PRESENCE_PROP_PRESENCE_NOTE = 3,
+        PRESENCE_PROP_IS_OOF = 4,
+        PRESENCE_PROP_TOOL_TIP = 5,
+        PRESENCE_PROP_CUSTOM_STATUS_STRING = 6,
+        PRESENCE_PROP_DEVICE_TYPE = 7,
+        PRESENCE_PROP_CURRENT_CALENDAR_STATE = 8,
+        PRESENCE_PROP_NEXT_CALENDAR_STATE = 9,
+        PRESENCE_PROP_NEXT_CALENDAR_STATE_TIME = 10,
+        PRESENCE_PROP_MAX = 11
+    } __MIDL___MIDL_itf_msgrua_0001_0054_0003;
+
+    typedef enum {
+        EXTENDED_STATUS_WEB = 1,
+        EXTENDED_STATUS_MOBILE = 2,
+        EXTENDED_STATUS_BLOCKED = 256
+    } EXTENDED_STATUS_TYPE;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0054_0001 CONTACT_PROPERTY;
+
+    typedef enum {
+        CONTACT_PROP_TITLE = 0,
+        CONTACT_PROP_OFFICE = 1
+    } __MIDL___MIDL_itf_msgrua_0001_0054_0001;
+
+    typedef [public]
+    __MIDL___MIDL_itf_msgrua_0001_0054_0002 CALENDAR_STATE;
+
+    typedef enum {
+        CALENDAR_STATE_NOT_AVAILABLE = 0,
+        CALENDAR_STATE_FREE = 1,
+        CALENDAR_STATE_TENTATIVE = 2,
+        CALENDAR_STATE_NOTWORKING = 3,
+        CALENDAR_STATE_BUSY = 4,
+        CALENDAR_STATE_OUT_OF_OFFICE = 5
+    } __MIDL___MIDL_itf_msgrua_0001_0054_0002;
+
+    [
+      odl,
+      uuid(D50C3186-0F89-48F8-B204-3604629DEE10),
+      helpstring("Messenger Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessenger : IDispatch {
+        [id(0x00000503), propget, helpstring("Returns main window IMessengerWindow object.")]
+        HRESULT Window([out, retval] IDispatch** ppMWindow);
+        [id(0x00000505), helpstring("Initiates view contact profile.")]
+        HRESULT ViewProfile([in] VARIANT vContact);
+        [id(0x00000500), propget, helpstring("Returns the path to the receive directory.")]
+        HRESULT ReceiveFileDirectory([out, retval] BSTR* bstrPath);
+        [id(0x00000501), helpstring("Initiates voice conversation.")]
+        HRESULT StartVoice(
+                        [in] VARIANT vContact, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x0000050f), helpstring("Initiates invite application.")]
+        HRESULT InviteApp(
+                        [in] VARIANT vContact, 
+                        [in] BSTR bstrAppID, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x00000512), helpstring("Initiates default e-mail provider compose window.")]
+        HRESULT SendMail([in] VARIANT vContact);
+        [id(0x0000050d), helpstring("Initiates default e-mail application.")]
+        HRESULT OpenInbox();
+        [id(0x0000050c), helpstring("Initiates send file invite.")]
+        HRESULT SendFile(
+                        [in] VARIANT vContact, 
+                        [in] BSTR bstrFileName, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x0000050b), helpstring("Initiates a sign out from all services.")]
+        HRESULT Signout();
+        [id(0x00000511), helpstring("Initiates signin dialog and populates signin name and password edit boxes.")]
+        HRESULT Signin(
+                        [in] long hwndParent, 
+                        [in] BSTR bstrSigninName, 
+                        [in] BSTR bstrPassword);
+        [id(0x00000506), helpstring("Find contact in list.")]
+        HRESULT GetContact(
+                        [in] BSTR bstrSigninName, 
+                        [in] BSTR bstrServiceId, 
+                        [out, retval] IDispatch** ppMContact);
+        [id(0x00000507), helpstring("Initiates Options dialog.")]
+        HRESULT OptionsPages(
+                        [in] long hwndParent, 
+                        [in] MOPTIONPAGE MOPTIONPAGE);
+        [id(0x00000508), helpstring("Initiates Add Contact dialog.")]
+        HRESULT AddContact(
+                        [in] long hwndParent, 
+                        [in] BSTR bstrEMail);
+        [id(0x00000509), helpstring("Initiates Find Contact Dialog.")]
+        HRESULT FindContact(
+                        [in] long hwndParent, 
+                        [in] BSTR bstrFirstName, 
+                        [in] BSTR bstrLastName, 
+                        [in, optional] VARIANT vbstrCity, 
+                        [in, optional] VARIANT vbstrState, 
+                        [in, optional] VARIANT vbstrCountry);
+        [id(0x0000050a), helpstring("Initiates IM Window.")]
+        HRESULT InstantMessage(
+                        [in] VARIANT vContact, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x00000514), helpstring("Initiates Phone Window.")]
+        HRESULT Phone(
+                        [in] VARIANT vContact, 
+                        [in] MPHONE_TYPE ePhoneNumber, 
+                        [in] BSTR bstrNumber, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x00000515), helpstring("Initiates audio tuning wizard.")]
+        HRESULT MediaWizard([in] long hwndParent);
+        [id(0x00000516), helpstring("Initiates pager instant message  Window.")]
+        HRESULT Page(
+                        [in] VARIANT vContact, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x00000513), helpstring("Initiates a signin without UI if connected to the network and contact saved the password.")]
+        HRESULT AutoSignin();
+        [id(0x00000517), propget, helpstring("Returns the contact list.")]
+        HRESULT MyContacts([out, retval] IDispatch** ppMContacts);
+        [id(0x00000518), propget, helpstring("Returns signin name.")]
+        HRESULT MySigninName([out, retval] BSTR* pbstrName);
+        [id(0x00000502), propget, helpstring("Returns friendly Name.")]
+        HRESULT MyFriendlyName([out, retval] BSTR* pbstrName);
+        [id(0x00000519), propput, helpstring("Set my status.")]
+        HRESULT MyStatus([in] MISTATUS pmStatus);
+        [id(0x00000519), propget, helpstring("Set my status.")]
+        HRESULT MyStatus([out, retval] MISTATUS* pmStatus);
+        [id(0x00000504), propget, helpstring("Returns the number of unread e-mail from default provider.")]
+        HRESULT UnreadEmailCount(
+                        [in] MUAFOLDER mFolder, 
+                        [out, retval] long* plCount);
+        [id(0x0000050e), propget, helpstring("Returns my primary service name.")]
+        HRESULT MyServiceName([out, retval] BSTR* pbstrServiceName);
+        [id(0x00000510), propget, helpstring("Returns one of my phone numbers.")]
+        HRESULT MyPhoneNumber(
+                        [in] MPHONE_TYPE PhoneType, 
+                        [out, retval] BSTR* pbstrNumber);
+        [id(0x0000051a), propget, helpstring("Local User property")]
+        HRESULT MyProperty(
+                        [in] MCONTACTPROPERTY ePropType, 
+                        [out, retval] VARIANT* pvPropVal);
+        [id(0x0000051a), propput, helpstring("Local User property")]
+        HRESULT MyProperty(
+                        [in] MCONTACTPROPERTY ePropType, 
+                        [in] VARIANT pvPropVal);
+        [id(0x0000051b), propget, helpstring("Return my primary service ID.")]
+        HRESULT MyServiceId([out, retval] BSTR* pbstrServiceId);
+        [id(0x0000051c), propget, helpstring("Returns services list.")]
+        HRESULT Services([out, retval] IDispatch** ppdispServices);
+    };
+
+    [
+      odl,
+      uuid(D50C3286-0F89-48F8-B204-3604629DEE10),
+      helpstring("Messenger Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessenger2 : IMessenger {
+        [id(0x00000521), propget, helpstring("Contacts View.")]
+        HRESULT ContactsSortOrder([out, retval] MUASORT* pSort);
+        [id(0x00000521), propput, helpstring("Contacts View.")]
+        HRESULT ContactsSortOrder([in] MUASORT pSort);
+        [id(0x0000051e), helpstring("Initiates video conversation.")]
+        HRESULT StartVideo(
+                        [in] VARIANT vContact, 
+                        [out, retval] IDispatch** ppMWindow);
+        [id(0x0000051f), propget, helpstring("Returns the group collection.")]
+        HRESULT MyGroups([out, retval] IDispatch** ppMGroups);
+        [id(0x00000520), helpstring("Create group in the service.")]
+        HRESULT CreateGroup(
+                        [in] BSTR bstrName, 
+                        [in] VARIANT vService, 
+                        [out, retval] IDispatch** ppGroup);
+    };
+
+
+
+    [
+      odl,
+      uuid(D50C3386-0F89-48F8-B204-3604629DEE10),
+      helpstring("Messenger Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessenger3 : IMessenger2 {
+        [id(0x00000522), propget, helpstring("Messenger property.")]
+        HRESULT Property(
+                        [in] MMESSENGERPROPERTY ePropType, 
+                        [out, retval] VARIANT* pvPropVal);
+        [id(0x00000522), propput, helpstring("Messenger property.")]
+        HRESULT Property(
+                        [in] MMESSENGERPROPERTY ePropType, 
+                        [in] VARIANT pvPropVal);
+    };
+
+
+    [
+      odl,
+      uuid(DA0635E8-09AF-480C-88B2-AA9FA1D9DB27),
+      helpstring("MessengerAdvanced Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerAdvanced : IMessenger3 {
+        [id(0x60050000), helpstring("Starts a two or multiparty conversation, based on conversation specific data")]
+        HRESULT StartConversation(
+                        [in] CONVERSATION_TYPE ConversationType, 
+                        [in] VARIANT vParticipants, 
+                        [in, optional] VARIANT vContextualData, 
+                        [in, optional] VARIANT vSubject, 
+                        [in, optional] VARIANT vConversationIndex, 
+                        [in, optional] VARIANT vConversationData, 
+                        [out, retval, optional] VARIANT* pvWndHnd);
+        [id(0x60050001), helpstring("Get Authentication Infomation")]
+        HRESULT GetAuthenticationInfo([out, retval] BSTR* pbstrAuthInfo);
+    };
+
+
+
+
+
+    [
+      odl,
+      uuid(53A5023D-6872-454A-9A4F-827F18CFBE02),
+      helpstring("IMessengerContactResolution Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerContactResolution : IDispatch {
+        [id(0x60020000), helpstring("Reverse look up for a specific contact")]
+        HRESULT ResolveContact(
+                        [in] ADDRESS_TYPE AddressType, 
+                        [in] CONTACT_RESOLUTION_TYPE ResolutionType, 
+                        [in] BSTR bstrAddress, 
+                        [out, retval] BSTR* pbstrIMAddress);
+    };
+
+
+
+    [
+      uuid(C9A6A6B6-9BC1-43A5-B06B-E58874EEBC96),
+      helpstring("Messenger Events"),
+      hidden
+    ]
+    dispinterface DMessengerEvents {
+        properties:
+        methods:
+            [id(0x00000415), helpstring("A new group has been created.")]
+            void OnGroupAdded(
+                            [in] long hr, 
+                            [in] IDispatch* pMGroup);
+            [id(0x00000416), helpstring("A new group has been removed.")]
+            void OnGroupRemoved(
+                            [in] long hr, 
+                            [in] IDispatch* pMGroup);
+            [id(0x00000417), helpstring("A group has been renamed.")]
+            void OnGroupNameChanged(
+                            [in] long hr, 
+                            [in] IDispatch* pMGroup);
+            [id(0x00000418), helpstring("A contact has been added to the group.")]
+            void OnContactAddedToGroup(
+                            [in] long hr, 
+                            [in] IDispatch* pMGroup, 
+                            [in] IDispatch* pMContact);
+            [id(0x00000419), helpstring("A contact has been added to the group.")]
+            void OnContactRemovedFromGroup(
+                            [in] long hr, 
+                            [in] IDispatch* pMGroup, 
+                            [in] IDispatch* pMContact);
+            [id(0x00000411), helpstring("A new IM Window has beed created.")]
+            void OnIMWindowCreated([in] IDispatch* pIMWindow);
+            [id(0x00000412), helpstring("An IM Window has beed destroyed.")]
+            void OnIMWindowDestroyed([in] IDispatch* pIMWindow);
+            [id(0x00000413), helpstring("A contact has been added to the IM Window.")]
+            void OnIMWindowContactAdded(
+                            [in] IDispatch* pContact, 
+                            [in] IDispatch* pIMWindow);
+            [id(0x00000414), helpstring("A contact has been removed from the IM Window.")]
+            void OnIMWindowContactRemoved(
+                            [in] IDispatch* pContact, 
+                            [in] IDispatch* pIMWindow);
+            [id(0x00000408), helpstring("Messenger is shutting down.")]
+            void OnAppShutdown();
+            [id(0x00000400), helpstring("Signin attempt complete.")]
+            void OnSignin([in] long hr);
+            [id(0x00000401), helpstring("Signout attempt complete.")]
+            void OnSignout();
+            [id(0x00000402), helpstring("Resutlt from list add request.")]
+            void OnContactListAdd(
+                            [in] long hr, 
+                            [in] IDispatch* pMContact);
+            [id(0x00000403), helpstring("Result from list remove request.")]
+            void OnContactListRemove(
+                            [in] long hr, 
+                            [in] IDispatch* pMContact);
+            [id(0x00000405), helpstring("Result from my friendly name change request.")]
+            void OnMyFriendlyNameChange(
+                            [in] long hr, 
+                            [in] BSTR bstrPrevFriendlyName);
+            [id(0x00000407), helpstring("My status changed.")]
+            void OnMyStatusChange(
+                            [in] long hr, 
+                            [in] MISTATUS mMyStatus);
+            [id(0x0000040e), helpstring("Result from one of my phone numbers change request.")]
+            void OnMyPhoneChange(
+                            [in] MPHONE_TYPE PhoneType, 
+                            [in] BSTR bstrNumber);
+            [id(0x00000409), helpstring("Result from one of my attributes change request.")]
+            void OnMyPropertyChange(
+                            [in] long hr, 
+                            [in] MCONTACTPROPERTY ePropType, 
+                            [in] VARIANT vPropVal);
+            [id(0x00000404), helpstring("Result from contact friendly name change request.")]
+            void OnContactFriendlyNameChange(
+                            [in] long hr, 
+                            [in] IDispatch* pMContact, 
+                            [in] BSTR bstrPrevFriendlyName);
+            [id(0x00000406), helpstring("Contact state changed.")]
+            void OnContactStatusChange(
+                            [in] IDispatch* pMContact, 
+                            [in] MISTATUS mStatus);
+            [id(0x0000040a), helpstring("Result from one of contact attributes change notification.")]
+            void OnContactPropertyChange(
+                            [in] long hr, 
+                            [in] IDispatch* pContact, 
+                            [in] MCONTACTPROPERTY ePropType, 
+                            [in] VARIANT vPropVal);
+            [id(0x0000040b), helpstring("Result from contact block state change notification.")]
+            void OnContactBlockChange(
+                            [in] long hr, 
+                            [in] IDispatch* pContact, 
+                            [in] VARIANT_BOOL pBoolBlock);
+            [id(0x0000040c), helpstring("Result from contact pager configuration change notification.")]
+            void OnContactPagerChange(
+                            [in] long hr, 
+                            [in] IDispatch* pContact, 
+                            [in] VARIANT_BOOL pBoolPage);
+            [id(0x0000040d), helpstring("Result from one of contact phone numbers change notification.")]
+            void OnContactPhoneChange(
+                            [in] long hr, 
+                            [in] IDispatch* pContact, 
+                            [in] MPHONE_TYPE PhoneType, 
+                            [in] BSTR bstrNumber);
+            [id(0x0000040f), helpstring("Unread email count has changed.")]
+            void OnUnreadEmailChange(
+                            [in] MUAFOLDER mFolder, 
+                            [in] long cUnreadEmail, 
+                            [in, out] VARIANT_BOOL* pBoolfEnableDefault);
+            [id(0x0000041a), helpstring("Resolving contact has done.")]
+            void OnContactResolved(
+                            [in] long hr, 
+                            [in] ADDRESS_TYPE AddressType, 
+                            [in] BSTR bstrAddress, 
+                            [in] BSTR bstrIMAddress);
+    };
+
+    [
+      odl,
+      uuid(D6B0E4C8-FAD6-4885-B271-0DC5A584ADF8),
+      helpstring("Messenger Window Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerWindow : IDispatch {
+        [id(0x00000805), helpstring("Close the window.")]
+        HRESULT Close();
+        [id(0x00000800), propget, helpstring("Returns the Handle of the Application window.")]
+        HRESULT HWND([out, retval] long* phWnd);
+        [id(0x00000801), propget, helpstring("The horizontal position (pixels) of the Application window relative to the screen.")]
+        HRESULT Left([out, retval] long* plLeft);
+        [id(0x00000801), propput, helpstring("The horizontal position (pixels) of the Application window relative to the screen.")]
+        HRESULT Left([in] long plLeft);
+        [id(0x00000802), propget, helpstring("The vertical position (pixels) of the Application window relative to the screen.")]
+        HRESULT Top([out, retval] long* plTop);
+        [id(0x00000802), propput, helpstring("The vertical position (pixels) of the Application window relative to the screen.")]
+        HRESULT Top([in] long plTop);
+        [id(0x00000803), propget, helpstring("The horizontal dimension (pixels) of the Application window.")]
+        HRESULT Width([out, retval] long* plWidth);
+        [id(0x00000803), propput, helpstring("The horizontal dimension (pixels) of the Application window.")]
+        HRESULT Width([in] long plWidth);
+        [id(0x00000804), propget, helpstring("The vertical dimension (pixels) of the Application window.")]
+        HRESULT Height([out, retval] long* plHeight);
+        [id(0x00000804), propput, helpstring("The vertical dimension (pixels) of the Application window.")]
+        HRESULT Height([in] long plHeight);
+        [id(0x00000807), propget, helpstring("Get visibility of the window.")]
+        HRESULT IsClosed([out, retval] VARIANT_BOOL* pBoolClose);
+        [id(0x00000806), helpstring("Show the window.")]
+        HRESULT Show();
+        [id(0x00000808), propget, helpstring("Window property.")]
+        HRESULT Property(
+                        [in] MWINDOWPROPERTY ePropType, 
+                        [out, retval] VARIANT* pvPropVal);
+        [id(0x00000808), propput, helpstring("Window property.")]
+        HRESULT Property(
+                        [in] MWINDOWPROPERTY ePropType, 
+                        [in] VARIANT pvPropVal);
+    };
+
+
+    [
+      odl,
+      uuid(D6B0E4C9-FAD6-4885-B271-0DC5A584ADF8),
+      helpstring("Messenger Conversation Window Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerConversationWnd : IMessengerWindow {
+        [id(0x00000809), propget, helpstring("Get a list of contacts in the conversation window.")]
+        HRESULT Contacts([out, retval] IDispatch** pContacts);
+        [id(0x0000080a), propget, helpstring("Get the history text.")]
+        HRESULT History([out, retval] BSTR* bstrHistoryText);
+        [id(0x0000080b), helpstring("Add a user to the conversation.")]
+        HRESULT AddContact([in] VARIANT vContact);
+    };
+
+    [
+      odl,
+      uuid(7C613A61-0633-4C69-AFF0-5BA9F1D28887),
+      helpstring("Messenger Conversation Window Advanced Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerConversationWndAdvanced : IMessengerConversationWnd {
+        [id(0x60040000), helpstring("Send text to everyone in conversation window.")]
+        HRESULT SendText([in] BSTR bstrTextMessage);
+    };
+
+    [
+      odl,
+      uuid(E7479A0F-BB19-44A5-968F-6F41D93EE0BC),
+      helpstring("Messenger Contact for IMessenger"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerContact : IDispatch {
+        [id(0x00000600), propget, helpstring("Returns friendly Name of the contact.")]
+        HRESULT FriendlyName([out, retval] BSTR* pbstrFriendlyName);
+        [id(0x00000601), propget, helpstring("Returns status of the contact.")]
+        HRESULT Status([out, retval] MISTATUS* pMstate);
+        [id(0x00000602), propget, helpstring("Returns signin Name of the contact.")]
+        HRESULT SigninName([out, retval] BSTR* pbstrSigninName);
+        [id(0x00000603), propget, helpstring("Return service name of the contact.")]
+        HRESULT ServiceName([out, retval] BSTR* pbstrServiceName);
+        [id(0x00000604), propget, helpstring("Block / Unblock the contact")]
+        HRESULT Blocked([out, retval] VARIANT_BOOL* pBoolBlock);
+        [id(0x00000604), propput, helpstring("Block / Unblock the contact")]
+        HRESULT Blocked([in] VARIANT_BOOL pBoolBlock);
+        [id(0x00000607), propget, helpstring("The contact has a pager configured?")]
+        HRESULT CanPage([out, retval] VARIANT_BOOL* pBoolPage);
+        [id(0x00000608), propget, helpstring("Returns Contact's phone number")]
+        HRESULT PhoneNumber(
+                        [in] MPHONE_TYPE PhoneType, 
+                        [out, retval] BSTR* bstrNumber);
+        [id(0x00000605), propget, helpstring("Is this contact the local contact?")]
+        HRESULT IsSelf([out, retval] VARIANT_BOOL* pBoolSelf);
+        [id(0x00000606), propget, helpstring("Contact property.")]
+        HRESULT Property(
+                        [in] MCONTACTPROPERTY ePropType, 
+                        [out, retval] VARIANT* pvPropVal);
+        [id(0x00000606), propput, helpstring("Contact property.")]
+        HRESULT Property(
+                        [in] MCONTACTPROPERTY ePropType, 
+                        [in] VARIANT pvPropVal);
+        [id(0x00000609), propget, helpstring("Return contact's service ID.")]
+        HRESULT ServiceId([out, retval] BSTR* pbstrServiceId);
+    };
+
+    [
+      odl,
+      uuid(086F69C0-2FBD-46B3-BE50-EC401AB86099),
+      helpstring("Messenger Contact Advanced for IMessenger"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerContactAdvanced : IMessengerContact {
+        [id(0x60030000), propget, helpstring("IsTagged property.")]
+        HRESULT IsTagged([out, retval] VARIANT_BOOL* pBoolIsTagged);
+        [id(0x60030000), propput, helpstring("IsTagged property.")]
+        HRESULT IsTagged([in] VARIANT_BOOL pBoolIsTagged);
+        [id(0x60030002), propget, helpstring("Get array of presence properties")]
+        HRESULT PresenceProperties([out, retval] VARIANT* pvPresenceProperties);
+        [id(0x60030002), propput, helpstring("Get array of presence properties")]
+        HRESULT PresenceProperties([in] VARIANT pvPresenceProperties);
+    };
+
+    [
+      odl,
+      uuid(E7479A0D-BB19-44A5-968F-6F41D93EE0BC),
+      helpstring("Messenger Contacts Collection for IMessenger"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerContacts : IDispatch {
+        [id(0x00000700), propget, helpstring("Returns number of contacts.")]
+        HRESULT Count([out, retval] long* pcContacts);
+        [id(00000000), helpstring("Returns a specific contact by index.")]
+        HRESULT Item(
+                        [in] long Index, 
+                        [out, retval] IDispatch** ppMContact);
+        [id(0x00000701), helpstring("Removes a contact from the collection.")]
+        HRESULT Remove([in] IDispatch* pMContact);
+        [id(0xfffffffc), propget, restricted, helpstring("Enumerates the users.")]
+        HRESULT _NewEnum([out, retval] IUnknown** ppUnknown);
+    };
+
+    [
+      odl,
+      uuid(2E50547C-A8AA-4F60-B57E-1F414711007B),
+      helpstring("Messenger Service Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerService : IDispatch {
+        [id(0x00000882), propget, helpstring("Service name.")]
+        HRESULT ServiceName([out, retval] BSTR* pbstrServiceName);
+        [id(0x00000887), propget, helpstring("Service ID.")]
+        HRESULT ServiceId([out, retval] BSTR* pbstrID);
+        [id(0x00000883), propget, helpstring("Friendly name.")]
+        HRESULT MyFriendlyName([out, retval] BSTR* pbstrName);
+        [id(0x00000885), propget, helpstring("Service status.")]
+        HRESULT MyStatus([out, retval] MISTATUS* pmiStatus);
+        [id(0x00000888), propget, helpstring("Signin name.")]
+        HRESULT MySigninName([out, retval] BSTR* pbstrName);
+        [id(0x00000886), propget, helpstring("Service property.")]
+        HRESULT Property(
+                        [in] MSERVICEPROPERTY ePropType, 
+                        [out, retval] VARIANT* pvPropVal);
+        [id(0x00000886), propput, helpstring("Service property.")]
+        HRESULT Property(
+                        [in] MSERVICEPROPERTY ePropType, 
+                        [in] VARIANT pvPropVal);
+    };
+
+
+
+    [
+      odl,
+      uuid(2E50547B-A8AA-4F60-B57E-1F414711007B),
+      helpstring("Messenger Services Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerServices : IDispatch {
+        [id(0x00000880), propget, helpstring("Primary Service Object.")]
+        HRESULT PrimaryService([out, retval] IDispatch** ppService);
+        [id(0x00000881), propget, helpstring("Number of services.")]
+        HRESULT Count([out, retval] long* pcServices);
+        [id(00000000), helpstring("Retrieves a specific service by index.")]
+        HRESULT Item(
+                        [in] long Index, 
+                        [out, retval] IDispatch** ppService);
+        [id(0xfffffffc), propget, restricted, helpstring("Enumerates the services.")]
+        HRESULT _NewEnum([out, retval] IUnknown** ppUnknown);
+    };
+
+    [
+      odl,
+      uuid(E1AF1038-B884-44CB-A535-1C3C11A3D1DB),
+      helpstring("Messenger Group Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerGroup : IDispatch {
+        [id(0x00000683), propget, helpstring("Returns the group's collection of users.")]
+        HRESULT Contacts([out, retval] IDispatch** ppMContacts);
+        [id(0x00000684), propget, helpstring("Name of the group.")]
+        HRESULT Name([out, retval] BSTR* bstrName);
+        [id(0x00000684), propput, helpstring("Name of the group.")]
+        HRESULT Name([in] BSTR bstrName);
+        [id(0x00000685), helpstring("Add a contact to the group.")]
+        HRESULT AddContact([in] VARIANT vContact);
+        [id(0x00000686), helpstring("Remove a contact from the group.")]
+        HRESULT RemoveContact([in] VARIANT vContact);
+        [id(0x00000687), propget, helpstring("Service object from the group.")]
+        HRESULT Service([out, retval] IDispatch** pService);
+    };
+
+    [
+      odl,
+      uuid(E1AF1028-B884-44CB-A535-1C3C11A3D1DB),
+      helpstring("Messenger Groups Interface"),
+      dual,
+      oleautomation
+    ]
+    interface IMessengerGroups : IDispatch {
+        [id(0x00000681), helpstring("Remove a group from the collection.")]
+        HRESULT Remove([in] IDispatch* pGroup);
+        [id(0x00000682), propget, helpstring("Returns number of groups.")]
+        HRESULT Count([out, retval] long* pcCount);
+        [id(00000000), helpstring("Returns a specific group by index.")]
+        HRESULT Item(
+                        [in] long Index, 
+                        [out, retval] IDispatch** ppMGroup);
+        [id(0xfffffffc), propget, restricted, helpstring("Enumerates the contacts.")]
+        HRESULT _NewEnum([out, retval] IUnknown** ppUnknown);
+    };
+
+
+
+
+
+    [
+      uuid(8885370D-B33E-44B7-875D-28E403CF9270),
+      helpstring("Messenger Object"),
+      appobject
+    ]
+    coclass Messenger {
+        [default] interface IMessenger3;
+        [default, source] dispinterface DMessengerEvents;
+    };
+};

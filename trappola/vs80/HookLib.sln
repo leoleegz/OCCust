@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FCA31CD-83CA-4C6D-9141-09CBFEA87C8D}"
+	ProjectSection(SolutionItems) = preProject
+		..\CHANGELOG.txt = ..\CHANGELOG.txt
+		..\include\HookLib.h = ..\include\HookLib.h
+		..\README.txt = ..\README.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookLib", "HookLib\HookLib.vcproj", "{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookLibUtils", "HookLibUtils\HookLibUtils.vcproj", "{24221551-8455-4769-AAA7-4A62307C1A4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Debug|Win32.Build.0 = Debug|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Release|Win32.ActiveCfg = Release|Win32
+		{F1BEF4F8-A4BF-40B7-BCF7-0AB5A60E02A8}.Release|Win32.Build.0 = Release|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Debug|Win32.Build.0 = Debug|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Release|Win32.ActiveCfg = Release|Win32
+		{24221551-8455-4769-AAA7-4A62307C1A4A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
